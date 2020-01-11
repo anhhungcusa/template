@@ -1,0 +1,7 @@
+.btn {
+    @include flexbox(red);
+    &--active {
+        color: $bg-color;
+    }
+}
+

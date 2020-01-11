@@ -1,0 +1,13 @@
+/*---------------- Utils --------------------------*/
+/*---------------- Layout ---------------*/
+/*---------------- Component ---------------*/
+.btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .btn--active {
+    color: #fcfcfc; }
+
+/*# sourceMappingURL=index.css.map */
