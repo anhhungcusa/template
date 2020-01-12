@@ -1,11 +1,18 @@
 
-/*---------------- Utils --------------------------*/
+/*-------------------------- Abstracts --------------------------*/
+@import './abstracts/function';
 @import './abstracts/variables';
+@import './abstracts/utils';
 @import './abstracts/mixin';
+@import './abstracts/atomic';
 
-/*---------------- Layout ---------------*/
+/*-------------------------- Base --------------------------*/
+@import './base/reset';
+
+/*-------------------------- Layout --------------------------*/
+@import './layout/header';
+@import './layout/wrapper';
 @import './layout/grid';
-@import './layout/flexbox';
 
-/*---------------- Component ---------------*/
+/*-------------------------- Component --------------------------*/
 @import './components/button'; 

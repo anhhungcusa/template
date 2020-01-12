@@ -1,0 +1,53 @@
+$utilities: () !default;
+$utilities: map-merge(
+  (
+    display: (
+      class: d,
+      value: block inline flex,
+      print: true,
+      property: display
+    ),
+    justity-content: (
+        print: true,
+        property: justify-content,
+        value: (
+            center: center,
+            start: flex-start,
+            end: flex-end,
+            between: space-between,
+            around: space-around,
+        )
+    ),
+    align-items: (
+        print: true,
+        property: align-items,
+        value: (
+            center: center,
+            start: flex-start,
+            end: flex-end
+        )        
+    ),
+    font-size: (
+        print: true,
+        property: font-size,
+        class: f-s,
+        value: $font-size-range
+    ),
+    z-index: (
+        print: true,
+        property: z-index,
+        class: zindex,
+        value: (
+            stricky: 1000,
+            fixed: 1020,
+            modal: 1030,
+        )
+    ),
+  ),
+  $utilities
+);
+
+.test {
+    align-items: center ;
+    justify-content: space-between;
+}

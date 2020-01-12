@@ -1,2 +1,14 @@
+// font
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$primary-font: 'Roboto', sans-serif;
+
 // color
 $bg-color: #fcfcfc;
+
+// text color
+$primary-text-color: #32323d;
+$secondary-text-color: #a0a0a0;
+$acitve-text-color: #6e55b4;
+
+// font-size
+$font-size-range: make-range-values(10, 24, px);

@@ -1,0 +1,11 @@
+header {
+    background-image: url('./../img/ny-header-light.jpg');
+    background-size: cover;
+    & .logo {
+        background-image: url('./../img/logo-mp3.svg');
+        background-size: cover;
+        width: 100px;
+        height: 32px;
+        display: block;
+    }
+}
