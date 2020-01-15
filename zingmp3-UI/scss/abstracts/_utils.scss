@@ -33,6 +33,17 @@ $utilities: map-merge(
         class: f-s,
         value: $font-size-range
     ),
+    font-weight: (
+        print: true,
+        property: font-weight,
+        class: f-w,
+        value: (
+            5: 500,
+            6: 600,
+            7: 700,
+            bold: bold
+        )
+    ),
     z-index: (
         print: true,
         property: z-index,
@@ -41,6 +52,40 @@ $utilities: map-merge(
             stricky: 1000,
             fixed: 1020,
             modal: 1030,
+            hiden: -10,
+        )
+    ),
+    image: (
+        print: true,
+        property: width height,
+        class: image,
+        value: (
+            fluid: 100%,
+            auto: auto
+        )
+    ),
+    radius: (
+        print: true,
+        property: border-radius,
+        class: radius,
+        value: (
+            circle: 50%,
+            5: 5px,
+            10: 10px
+        )
+    ), 
+    cursor: (
+        print: true,
+        property: cursor,
+        value: pointer
+    ),
+    thumb: (
+        print: true,
+        property: width height,
+        class: thumb,
+        value: (
+            40: 40px,
+            60: 60px
         )
     ),
   ),

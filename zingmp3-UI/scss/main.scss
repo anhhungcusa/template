@@ -6,13 +6,18 @@
 @import './abstracts/mixin';
 @import './abstracts/atomic';
 
-/*-------------------------- Base --------------------------*/
+/*-------------------------- Bases --------------------------*/
 @import './base/reset';
 
-/*-------------------------- Layout --------------------------*/
+/*-------------------------- Layouts --------------------------*/
 @import './layout/header';
 @import './layout/wrapper';
 @import './layout/grid';
 
-/*-------------------------- Component --------------------------*/
+/*-------------------------- Components --------------------------*/
+@import './components/nav';
 @import './components/button'; 
+@import './components/input';
+
+/*-------------------------- Pages --------------------------*/
+@import './pages/home'; 

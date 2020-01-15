@@ -1,0 +1,42 @@
+.home-pg {
+  & .slider-main {
+    position: relative;
+
+    & .slide-thumb {
+      position: absolute;
+      right: 30px;
+      bottom: -60px;
+      &__link {
+        // opacity: 0;
+        margin-left: 5px;
+        border: 2px solid transparent;
+        &:hover {
+          border: 2px solid white;
+        }
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            transition: transform  #{$i * 200}ms;
+          }
+        }
+
+        &--active {
+          border: 2px solid white;
+        }
+      }
+    }
+    
+    &:hover {
+      & .slide-thumb__link {
+        transform: translateY(-70px);
+        z-index: 1;
+      }
+    }
+  }
+
+  & .recently-listen {
+    position: relative;
+    z-index: 2;
+    background: $bg-color;
+    height: 400px;
+  }
+}
