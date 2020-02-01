@@ -3,7 +3,7 @@ $utilities: map-merge(
   (
     display: (
       class: d,
-      value: block inline flex,
+      value: block inline flex none,
       print: true,
       property: display
     ),
@@ -70,8 +70,9 @@ $utilities: map-merge(
         class: radius,
         value: (
             circle: 50%,
+            2: 2px,
+            4: 4px,
             5: 5px,
-            10: 10px
         )
     ), 
     cursor: (
@@ -85,9 +86,26 @@ $utilities: map-merge(
         class: thumb,
         value: (
             40: 40px,
-            60: 60px
+            60: 60px,
+            120: 120px,
+            190: auto,
+            fluid: 100%,
         )
     ),
+    overflow: (
+        print: true,
+        property: overflow,
+        class: overflow,
+        value: hidden
+    ),
+    color: (
+        print: true,
+        property: color,
+        class: color,
+        value: (
+            active: $active-color
+        )
+    )
   ),
   $utilities
 );

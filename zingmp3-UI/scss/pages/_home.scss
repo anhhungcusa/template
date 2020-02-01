@@ -1,4 +1,4 @@
-.home-pg {
+.home-pg .home-section {
   & .slider-main {
     position: relative;
 
@@ -7,15 +7,17 @@
       right: 30px;
       bottom: -60px;
       &__link {
-        // opacity: 0;
         margin-left: 5px;
         border: 2px solid transparent;
+        z-index: 1;
+        position: relative;
         &:hover {
           border: 2px solid white;
         }
+
         @for $i from 1 through 6 {
           &:nth-child(#{$i}) {
-            transition: transform  #{$i * 200}ms;
+            transition: all #{$i * 100 - 50}ms;
           }
         }
 
@@ -24,19 +26,202 @@
         }
       }
     }
-    
+
     &:hover {
       & .slide-thumb__link {
         transform: translateY(-70px);
-        z-index: 1;
       }
     }
+  }
+
+  & section {
+    padding-top: 30px;
+  }
+  & section:nth-child(2) {
+    background: $bg-color;
   }
 
   & .recently-listen {
     position: relative;
     z-index: 2;
-    background: $bg-color;
-    height: 400px;
+    &__header {
+      margin-bottom: 10px;
+
+      & .slide-controller {
+        & i {
+          margin: 0 10px;
+          cursor: pointer;
+          &:hover {
+            color: $active-color;
+          }
+        }
+        &--disable {
+          opacity: 0.1;
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    &__slide {
+      & .card {
+        &__image {
+          position: relative;
+          overflow: hidden;
+          & img {
+            transition: transform 500ms;
+          }
+          & .overlay {
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            & .play-action {
+              color: white;
+              font-size: 50px;
+            }
+          }
+          &:hover {
+            & img {
+              transform: scale(1.05);
+            }
+          }
+        }
+        &:hover .overlay {
+          opacity: 1;
+        }
+        &__info a {
+          @include clamp(2);
+          margin-bottom: 2px;
+          margin-top: 4px;
+          text-transform: capitalize;
+          &:hover {
+            color: $active-color;
+          }
+        }
+      }
+    }
+  }
+
+  & .chart {
+    & .week-chart {
+      &__item {
+        height: 60px;
+        & img {
+          transition: transform 500ms;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  & .artist {
+
+    & .card {
+      padding: 15px;
+      margin: 1px;
+      box-shadow: #a6a6a6b8 0px 0px 2px;
+      background: url("https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/spotlight-bg.jpg") center no-repeat;
+      background-size: cover;
+      height: 150px;
+      // width: 350px;
+      cursor: pointer;
+      & .artist-img img{
+        box-shadow: #a6a6a6b8 0px 0px 2px;
+        transition: transform 500ms;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      &__info {
+        
+        & .star-badge {
+          display: inline-block;
+          line-height: 1;
+          padding: 4px 8px;
+          background: linear-gradient(to right,#f508b7,#9102ff);
+          & > * {
+            color: white;
+          }
+          & span {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  & .new-release {
+    & .card-wrapper {
+      padding: 0 10px;
+    }
+    & .card {
+      background: white;
+      box-shadow: 0 0 20px 0 rgba(190,190,206,.15);
+      padding: 15px;
+      height: 150px;
+        & .artist-img {
+          
+          position: relative;
+          & img {
+            transition: transform 500ms;
+          }
+          & .overlay {
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            & .play-action {
+              color: white;
+              font-size: 40px;
+            }
+          }
+          &:hover {
+            & img {
+              transform: scale(1.05);
+            }
+          }
+          &:hover .overlay {
+            opacity: 1;
+          }
+        }
+        
+      & .card__info {
+        flex-direction: column;
+        flex-grow: 1;
+        margin-left: 10px;
+        & .title {
+          color: $primary-text-color;
+          text-transform: capitalize;
+          @include clamp(2)
+        }
+        & .order {
+          font-size: 50px;
+          line-height: 1;
+          font-weight: bold;
+          color: transparent;
+          -webkit-text-stroke: 2px rgba(102,69,193,.4);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        & .release-date {
+          color: $secondary-text-color;
+        }
+  
+        & .artist {
+          color: $secondary-text-color;
+        }
+      }
+    }
   }
 }

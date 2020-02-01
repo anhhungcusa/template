@@ -6,9 +6,10 @@
 
 @mixin clamp($max-line) {
 	display: -webkit-box;
-	line-clamp: $max-line;
+	-webkit-line-clamp: $max-line;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+	
 }
 
 @mixin heading($size) {
