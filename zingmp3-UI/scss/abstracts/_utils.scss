@@ -105,6 +105,12 @@ $utilities: map-merge(
         value: (
             active: $active-color
         )
+    ),
+    position: (
+        print: true,
+        property: position,
+        class: p,
+        value: relative absolute fixed sticky
     )
   ),
   $utilities
