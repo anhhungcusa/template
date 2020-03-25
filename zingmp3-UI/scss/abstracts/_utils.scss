@@ -7,7 +7,7 @@ $utilities: map-merge(
       print: true,
       property: display
     ),
-    justity-content: (
+    justify-content: (
         print: true,
         property: justify-content,
         value: (
@@ -49,10 +49,10 @@ $utilities: map-merge(
         property: z-index,
         class: zindex,
         value: (
-            stricky: 1000,
+            sticky: 1000,
             fixed: 1020,
             modal: 1030,
-            hiden: -10,
+            hidden: -10,
         )
     ),
     image: (

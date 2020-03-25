@@ -98,7 +98,7 @@
 .f-w-bold {
   font-weight: bold; }
 
-.zindex-stricky {
+.zindex-sticky {
   z-index: 1000; }
 
 .zindex-fixed {
@@ -107,7 +107,7 @@
 .zindex-modal {
   z-index: 1030; }
 
-.zindex-hiden {
+.zindex-hidden {
   z-index: -10; }
 
 .image-fluid {

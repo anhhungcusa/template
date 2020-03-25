@@ -17,7 +17,7 @@ const onTranslate = preIndex => (event) => {
 
     preIndex = page // save preIndex
 }
-// init auto carsousel
+// init auto carousel
 slick_auto.owlCarousel({
     items: 1,
     loop: true,
@@ -28,7 +28,7 @@ slick_auto.owlCarousel({
     mouseDrag: false,
     onTranslate: onTranslate(0)
 });
-// deplay 1s
+// delay 1s
 const debounceWrapper = debounce(1000)
 
 const stopAutoSlick = debounceWrapper(() => {
@@ -49,7 +49,7 @@ for (const element of slide_thumb_link) {
 
 }
 
-// add carousel for mulpti album
+// add carousel for multi album
 const albumSliderCollection = document.getElementsByClassName('slick-slider')
 const slideControllerCollection = document.getElementsByClassName('slide-controller')
 const albumSliders = Array.from(albumSliderCollection)
