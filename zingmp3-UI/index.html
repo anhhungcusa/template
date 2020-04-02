@@ -16,6 +16,7 @@
     <script src="'./../js/vendor/carousel/owl.carousel.min.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2d41f013f6.js" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
 
 <body class="home-pg">
@@ -47,34 +48,222 @@
             </div>
             <div class="top-bar__bottom menu-bar">
                 <ul class="d-flex nav">
-                    <li class="nav__item">
-                        <a class="nav-link" href=""> TRANG CHỦ </a>
+                    <li class="nav__item collapsible">
+                        <a class="nav-link " href=""> TRANG CHỦ </a>
                     </li>
                     <li class="nav__item">
                         <a class="nav-link" href=""> #ZINGCHART </a>
+                        <div class="dropdown-table-menu">
+                            <ul>
+                                <div>REALTIME</div>
+                                <li>Bài Hát</li>
+                                <li>MV</li>
+                            </ul>
+                            <ul>
+                                <div>Tuần</div>
+                                <li>Bài Hát</li>
+                                <li>MV</li>
+                            </ul>
+                            <ul>
+                                <div>UK-US</div>
+                                <li>Bài Hát</li>
+                                <li>MV</li>
+                            </ul>
+                            <ul>
+                                <div>K-POP</div>
+                                <li>Bài Hát</li>
+                                <li>MV</li>
+                            </ul>
+
+                        </div>
                     </li>
                     <li class="nav__item">
                         <a class="nav-link" href=""> MỚI PHÁT HÀNH </a>
                     </li>
                     <li class="nav__item">
                         <a class="nav-link" href=""> TOP 100 </a>
+                        <div class="dropdown-table-menu">
+                            <ul>
+                                <div>Việt Nam</div>
+                                <li>Nhạc Trẻ</li>
+                                <li>Nhạc Trữ Tình</li>
+                                <li>Dance Việt</li>
+                                <li>Rock Việt</li>
+                                <li>Rap / Hip Hop Việt</li>
+                                <li>Nhạc Trịnh</li>
+                                <li>Nhạc Thiếu Nhi</li>
+                            </ul>
+                            <ul>
+                                <div>Châu Á</div>
+                                <li>Pop</li>
+                                <li>Rock</li>
+                                <li>Rap / Hip Hop</li>
+                                <li>Country</li>
+                                <li>Electronic / Dance</li>
+                                <li>R&B / Soul</li>
+                                <li>Audiophile</li>
+                            </ul>
+                            <ul>
+                                <div>Âu Mỹ</div>
+                                <li>Hàn Quốc</li>
+                                <li>Nhật Bản</li>
+                                <li>Hoa Ngữ</li>
+                                <li>Thái Lan</li>
+                            </ul>
+                            <ul>
+                                <div>Hoà Tấu</div>
+                                <li>Classical</li>
+                                <li>Piano</li>
+                                <li>Guitar</li>
+                                <li>Violin</li>
+                                <li>Cello</li>
+                                <li>Saxophone</li>
+                                <li>Nhạc Cụ Dân Tộc</li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav__item">
                         <a class="nav-link" href=""> CHỦ ĐỀ </a>
+                        <div class="dropdown-table-menu">
+                            <ul>
+                                <div>Đề Xuất </div>
+                                <li>Nhạc Hot </li>
+                                <li>Những Bài Hit</li>
+                                <li>Nhạc Việt Bất Hủ</li>
+                                <li>K-Pop Hit</li>
+                                <li>Nhạc Thuý Nga</li>
+                                <li>Nhạc Bất Hủ Âu Mỹ</li>
+                            </ul>
+                            <ul>
+                                <div>Thể Loại</div>
+                                <li>EDM</li>
+                                <li>Acoustic</li>
+                                <li>indie</li>
+                                <li>Nhạc Không Lời</li>
+                                <li>Trữ Tình & Bolero</li>
+                            </ul>
+                            <ul>
+                                <div>Tâm Trạng</div>
+                                <li>Những Ngày Mưa</li>
+                                <li>Tình Yêu</li>
+                                <li>Giai Điệu Buồn</li>
+                                <li>Âm Nhạc Thư Giãn </li>
+                                <li>Motivation</li>
+                            </ul>
+                            <ul>
+                                <div>Hoạt Động</div>
+                                <li>Tập Trung</li>
+                                <li>Spa - Yoga</li>
+                                <li>Cà phê</li>
+                                <li>Weekend</li>
+                                <li>Party</li>
+                                <li>Du lịch</li>
+                            </ul>
+
+                        </div>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav-link" href=""> MV </a>
+                    <li class="nav__item collapsible">
+                        <a class="nav-link " href=""> MV </a>
+                        <div class="dropdown-table-menu">
+                            <ul>
+                                <div>Việt Nam</div>
+                                <li>Nhạc Trẻ</li>
+                                <li>Nhạc Trữ Tình</li>
+                                <li>Dance Việt</li>
+                                <li>Rock Việt</li>
+                                <li>Rap / Hip Hop Việt</li>
+                                <li>Nhạc Trịnh</li>
+                                <li>Nhạc Thiếu Nhi</li>
+                            </ul>
+                            <ul>
+                                <div>Châu Á</div>
+                                <li>Pop</li>
+                                <li>Rock</li>
+                                <li>Rap / Hip Hop</li>
+                                <li>Country</li>
+                                <li>Electronic / Dance</li>
+                                <li>R&B / Soul</li>
+                                <li>Audiophile</li>
+                            </ul>
+                            <ul>
+                                <div>Âu Mỹ</div>
+                                <li>Hàn Quốc</li>
+                                <li>Nhật Bản</li>
+                                <li>Hoa Ngữ</li>
+                                <li>Thái Lan</li>
+                            </ul>
+                            <ul>
+                                <div>Hoà Tấu</div>
+                                <li>Classical</li>
+                                <li>Piano</li>
+                                <li>Guitar</li>
+                                <li>Violin</li>
+                                <li>Cello</li>
+                                <li>Saxophone</li>
+                                <li>Nhạc Cụ Dân Tộc</li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item collapsible">
                         <a class="nav-link" href=""> ALBUM </a>
+                        <div class="dropdown-table-menu">
+                            <ul>
+                                <div>Việt Nam</div>
+                                <li>Nhạc Trẻ</li>
+                                <li>Nhạc Trữ Tình</li>
+                                <li>Dance Việt</li>
+                                <li>Rock Việt</li>
+                                <li>Rap / Hip Hop Việt</li>
+                                <li>Nhạc Trịnh</li>
+                                <li>Nhạc Thiếu Nhi</li>
+                            </ul>
+                            <ul>
+                                <div>Châu Á</div>
+                                <li>Pop</li>
+                                <li>Rock</li>
+                                <li>Rap / Hip Hop</li>
+                                <li>Country</li>
+                                <li>Electronic / Dance</li>
+                                <li>R&B / Soul</li>
+                                <li>Audiophile</li>
+                            </ul>
+                            <ul>
+                                <div>Âu Mỹ</div>
+                                <li>Hàn Quốc</li>
+                                <li>Nhật Bản</li>
+                                <li>Hoa Ngữ</li>
+                                <li>Thái Lan</li>
+                            </ul>
+                            <ul>
+                                <div>Hoà Tấu</div>
+                                <li>Classical</li>
+                                <li>Piano</li>
+                                <li>Guitar</li>
+                                <li>Violin</li>
+                                <li>Cello</li>
+                                <li>Saxophone</li>
+                                <li>Nhạc Cụ Dân Tộc</li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item collapsible">
                         <a class="nav-link" href=""> NGHỆ SĨ </a>
+                        <div class="dropdown-table-menu">
+                            <ul>
+                                <div>Nghệ Sĩ</div>
+                                <li>Việt Nam</li>
+                                <li>Âu Mỹ</li>
+                                <li>Hàn Quốc</li>
+                                <li>Nhật Bản</li>
+                                <li>Hoa Ngữ</li>
+                                <li>Hoà Tấu</li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav__item">
                         <a class="nav-link" href=""> NHẠC CÁ NHÂN </a>
                     </li>
-                    <li class="nav__item cursor-pointer vip-icon"></li>
+                    <li class="nav__item cursor-pointer vip-icon collapsible"></li>
                 </ul>
             </div>
         </div>
@@ -369,187 +558,189 @@
                         </div>
                         <div class="card__info">
                             <a class="f-w-6 f-s-14" href="K-Pop Dance" ">
-                                op Dance" </a> </div> </div> <div class="card">
-                                <div class="card__image radius-2 thumb-190">
-                                    <img class="owl-lazy image-fluid"
-                                        data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/2/0/b/7/20b744cbde64435a01194d9c33b7d002.jpg"
-                                        alt="">
-                                    <div class="overlay d-flex justify-content-center align-items-center">
-                                        <i class="play-action far fa-play-circle"></i>
-                                    </div>
-                                </div>
-                                <div class="card__info">
-                                    <a class="f-w-6 f-s-14" href="" title="Ngày Đẹp Trời">
-                                        Ngày Đẹp Trời
-                                    </a>
-                                </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/0/b/3/e/0b3e13bccb56ac7788794eb74af19ad1.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="K-POP REMIX!">
-                                    K-POP REMIX!
-                                </a>
+                                op Dance" </a> </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/2/0/b/7/20b744cbde64435a01194d9c33b7d002.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/f/d/0/0/fd0080a50811d618fe6a9eeefa8dcbcd.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="Nhạc Hàn Ballad Thư Giãn">
-                                    Nhạc Hàn Ballad Thư Giãn
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/e/0/e/2/e0e2e03737dc8e9f58ee50afdee48152.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="K-Pop Collab Songs">
-                                    K-Pop Collab Songs
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/8/2/6/2/82625af6f887b76349e053b54918c55e.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="Beautiful Liar">
-                                    Beautiful Liar
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/4/e/2/f/4e2f68a8c1c1f75fa2451ea50d6e7d12.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="Go Hard">
-                                    Go Hard
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/0/5/8/c/058c21c634a9ed1c74dda10284dd03f6.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="K-POP RELAX!">
-                                    K-POP RELAX!
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/3/a/d/d/3addac23ada4fecf017113bf585cdf1b.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="Let's Shut Up And Dance">
-                                    Let's Shut Up And Dance
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/3/e/5/6/3e5687ddba3691621c244b2e91fdd689.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="K-Pop Badass Girls">
-                                    K-Pop Badass Girls
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/e/9/0/3/e90301ceaba9b823226801a4fdd904cf.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="Nhạc Hàn Nghe Khi Mệt Mỏi">
-                                    Nhạc Hàn Nghe Khi Mệt Mỏi
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/2/1/c/f/21cf090a5e8f175d56c97fda551608d8.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="Ký Ức Buồn">
-                                    Ký Ức Buồn
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image radius-2 thumb-190">
-                                <img class="owl-lazy image-fluid"
-                                    data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/0/c/0/2/0c02f6d77ff7abf61ff5cb4252ddc348.jpg"
-                                    alt="">
-                                <div class="overlay d-flex justify-content-center align-items-center">
-                                    <i class="play-action far fa-play-circle"></i>
-                                </div>
-                            </div>
-                            <div class="card__info">
-                                <a class="f-w-6 f-s-14" href="" title="K-POP CLUB!">
-                                    K-POP CLUB!
-                                </a>
-                            </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="Ngày Đẹp Trời">
+                                Ngày Đẹp Trời
+                            </a>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/0/b/3/e/0b3e13bccb56ac7788794eb74af19ad1.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="K-POP REMIX!">
+                                K-POP REMIX!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/f/d/0/0/fd0080a50811d618fe6a9eeefa8dcbcd.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="Nhạc Hàn Ballad Thư Giãn">
+                                Nhạc Hàn Ballad Thư Giãn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/e/0/e/2/e0e2e03737dc8e9f58ee50afdee48152.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="K-Pop Collab Songs">
+                                K-Pop Collab Songs
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/8/2/6/2/82625af6f887b76349e053b54918c55e.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="Beautiful Liar">
+                                Beautiful Liar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/4/e/2/f/4e2f68a8c1c1f75fa2451ea50d6e7d12.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="Go Hard">
+                                Go Hard
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/0/5/8/c/058c21c634a9ed1c74dda10284dd03f6.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="K-POP RELAX!">
+                                K-POP RELAX!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/3/a/d/d/3addac23ada4fecf017113bf585cdf1b.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="Let's Shut Up And Dance">
+                                Let's Shut Up And Dance
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/3/e/5/6/3e5687ddba3691621c244b2e91fdd689.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="K-Pop Badass Girls">
+                                K-Pop Badass Girls
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/e/9/0/3/e90301ceaba9b823226801a4fdd904cf.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="Nhạc Hàn Nghe Khi Mệt Mỏi">
+                                Nhạc Hàn Nghe Khi Mệt Mỏi
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/2/1/c/f/21cf090a5e8f175d56c97fda551608d8.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="Ký Ức Buồn">
+                                Ký Ức Buồn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image radius-2 thumb-190">
+                            <img class="owl-lazy image-fluid"
+                                data-src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/0/c/0/2/0c02f6d77ff7abf61ff5cb4252ddc348.jpg"
+                                alt="">
+                            <div class="overlay d-flex justify-content-center align-items-center">
+                                <i class="play-action far fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <a class="f-w-6 f-s-14" href="" title="K-POP CLUB!">
+                                K-POP CLUB!
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="recently-listen container">
                 <div class="recently-listen__header d-flex align-items-center justify-content-between">
@@ -704,9 +895,10 @@
                     </div>
                 </div>
             </section>
+
             <section class="chart">
                 <div class="container">
-                    <div class="char__realtime">
+                    <div class="chart__realtime" id="chart-container">
 
                     </div>
                     <div class="week-chart">
@@ -2303,9 +2495,15 @@
             </ul>
         </div>
     </footer>
+    <div class="beta-container">
+        <ul class="beta-list">
+            <li class="back-to-top d-flex justify-content-center align-items-center"><i class="fas fa-chevron-up"></i></li>
+            <li class="help d-flex justify-content-center align-items-center"><i class="far fa-lightbulb"></i></li>
+        </ul>
+    </div> 
 
 </body>
+<script type="module" src="./js/common/header-animation.js"></script>
 <script type="module" src='./js/pages/home.js'></script>
-
 
 </html>
