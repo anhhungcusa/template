@@ -141,6 +141,10 @@
   width: 60px;
   height: 60px; }
 
+.thumb-50 {
+  width: 50px;
+  height: 50px; }
+
 .thumb-120 {
   width: 120px;
   height: 120px; }
@@ -158,6 +162,18 @@
 
 .color-active {
   color: #6e55b4; }
+
+.color-blue {
+  color: #4a90e2; }
+
+.color-green {
+  color: #50e3c2; }
+
+.color-red {
+  color: #e4340d; }
+
+.color-white {
+  color: white; }
 
 .p-relative {
   position: relative; }
@@ -418,6 +434,91 @@ footer .nav-footer {
     text-transform: capitalize; }
     .home-pg .home-section .recently-listen__slide .card__info a:hover {
       color: #6e55b4; }
+.home-pg .home-section .chart__realtime {
+  margin-bottom: 30px;
+  background-image: url("../img/bg-chart.svg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .home-pg .home-section .chart__realtime .chart-wrapper {
+    padding-bottom: 5px;
+    background-image: url("../img/bg-chart-container.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .home-pg .home-section .chart__realtime .chart-wrapper .chart-header {
+      padding: 20px; }
+      .home-pg .home-section .chart__realtime .chart-wrapper .chart-header .btn-zingchart {
+        color: white;
+        cursor: pointer;
+        font-weight: 700;
+        background: linear-gradient(to right, #4b38d7, #8d4fe2);
+        border-radius: 10px;
+        width: 86px;
+        height: 24px;
+        font-size: 12px;
+        padding: 0px 5px;
+        flex-grow: 1; }
+        .home-pg .home-section .chart__realtime .chart-wrapper .chart-header .btn-zingchart:hover {
+          background: white;
+          color: #65509e; }
+      .home-pg .home-section .chart__realtime .chart-wrapper .chart-header .time {
+        color: white;
+        font-size: 14px;
+        flex-grow: 8;
+        margin-left: 10px; }
+      .home-pg .home-section .chart__realtime .chart-wrapper .chart-header .btn-play-all {
+        cursor: pointer;
+        flex-grow: 1;
+        background-color: #65509e;
+        padding: 8px 7px;
+        color: white;
+        font-size: 12px;
+        border-radius: 4px; }
+        .home-pg .home-section .chart__realtime .chart-wrapper .chart-header .btn-play-all i {
+          margin-right: 5px; }
+        .home-pg .home-section .chart__realtime .chart-wrapper .chart-header .btn-play-all:hover {
+          background: white;
+          color: #65509e; }
+  .home-pg .home-section .chart__realtime .realtime-list-song {
+    flex-grow: 1;
+    padding: 15px 5px; }
+    .home-pg .home-section .chart__realtime .realtime-list-song li {
+      padding: 8px 10px 7px; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li .card > div:nth-child(1) {
+        flex-grow: 1; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li .card > div:nth-child(2) {
+        flex-grow: 1; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li .card > div:nth-child(3) {
+        flex-grow: 7; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li .card > div:nth-child(4) {
+        flex-grow: 1; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li .card .song-info .title {
+        color: white; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li .card .song-info .artist {
+        color: #a0a0a0; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li .card .song-img {
+        position: relative; }
+        .home-pg .home-section .chart__realtime .realtime-list-song li .card .song-img .overlay {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.7); }
+          .home-pg .home-section .chart__realtime .realtime-list-song li .card .song-img .overlay .play-action {
+            color: white; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li:hover {
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: transparent; }
+        .home-pg .home-section .chart__realtime .realtime-list-song li:hover .overlay {
+          opacity: 1 !important; }
+      .home-pg .home-section .chart__realtime .realtime-list-song li.active {
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: transparent; }
+        .home-pg .home-section .chart__realtime .realtime-list-song li.active .overlay {
+          opacity: 1 !important; }
 .home-pg .home-section .chart .week-chart__item img {
   height: 60px;
   transition: transform 500ms; }
@@ -611,6 +712,7 @@ footer .nav-footer {
       box-shadow: 0 0 0 gray;
       box-shadow: 0 2px 2px 1px #cccccc; }
       .home-pg .beta-container .beta-list > *:hover {
-        color: #6e55b4; }
+        color: #6e55b4;
+        box-shadow: 0 3px 4px 1px #d0d0d0; }
 
 /*# sourceMappingURL=index.css.map */

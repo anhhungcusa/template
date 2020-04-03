@@ -113,6 +113,124 @@
     }
 
     & .chart {
+      &__realtime {
+        margin-bottom: 30px;
+        background-image: url("../img/bg-chart.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        & .chart-wrapper {
+          padding-bottom: 5px;
+          background-image: url("../img/bg-chart-container.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          & .chart-header {
+            padding: 20px;
+            & .btn-zingchart {
+              color: white;
+              cursor: pointer;
+              font-weight: 700;
+              background: linear-gradient(to right, #4b38d7, #8d4fe2);
+              border-radius: 10px;
+              width: 86px;
+              height: 24px;
+              font-size: 12px;
+              padding: 0px 5px;
+              flex-grow: 1;
+              &:hover {
+                background: white;
+                color: #65509e;
+              }
+            }
+            & .time {
+              color: white;
+              font-size: 14px;
+              flex-grow: 8;
+              margin-left: 10px;
+            }
+            & .btn-play-all {
+              cursor: pointer;
+              flex-grow: 1;
+              background-color: #65509e;
+              padding: 8px 7px;
+              color: white;
+              font-size: 12px;
+              border-radius: 4px;
+              & i {
+                margin-right: 5px;
+              }
+              &:hover {
+                background: white;
+                color: #65509e;
+              }
+            }
+          }
+        }
+
+        & .realtime-list-song {
+          flex-grow: 1;
+          padding: 15px 5px;
+          & li {
+            padding: 8px 10px 7px;
+            & .card {
+              & > div:nth-child(1) {
+                flex-grow: 1;
+              }
+              & > div:nth-child(2) {
+                flex-grow: 1;
+              }
+              & > div:nth-child(3) {
+                flex-grow: 7;
+              }
+              & > div:nth-child(4) {
+                flex-grow: 1;
+              }
+
+              & .song-info {
+                & .title {
+                  color: white;
+                }
+                & .artist {
+                  color: #a0a0a0;
+                }
+              }
+
+              & .song-img {
+                position: relative;
+                & .overlay {
+                  opacity: 0;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background-color: rgba(0, 0, 0, 0.7);
+                  & .play-action {
+                    color: white;
+                  }
+                }
+              }
+            }
+            &:hover {
+              border-radius: 4px;
+              background-color: rgba(255, 255, 255, 0.15);
+              border-color: transparent;
+              & .overlay {
+                opacity: 1 !important;
+              }
+            }
+
+            &.active {
+              border-radius: 4px;
+              background-color: rgba(255, 255, 255, 0.15);
+              border-color: transparent;
+              & .overlay {
+                opacity: 1 !important;
+              }
+            }
+
+          }
+        }
+      }
       & .week-chart {
         &__item {
           & img {
@@ -384,20 +502,14 @@
         background: white;
         border-radius: 50%;
         width: 40px;
-        height: 40px; 
+        height: 40px;
         margin-bottom: 10px;
         box-shadow: 0 0 0 gray;
-        box-shadow:0 2px 2px 1px #cccccc;
+        box-shadow: 0 2px 2px 1px #cccccc;
         &:hover {
           color: $active-color;
+          box-shadow: 0 3px 4px 1px #d0d0d0;
         }
-      }
-      & .back-to-top {
-
-      }
-
-      & .help {
-
       }
     }
   }

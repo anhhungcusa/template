@@ -87,6 +87,7 @@ $utilities: map-merge(
         value: (
             40: 40px,
             60: 60px,
+            50: 50px,
             120: 120px,
             190: auto,
             fluid: 100%,
@@ -103,7 +104,11 @@ $utilities: map-merge(
         property: color,
         class: color,
         value: (
-            active: $active-color
+            active: $active-color,
+            blue: #4a90e2,
+            green: #50e3c2,
+            red: #e4340d,
+            white: white
         )
     ),
     position: (
