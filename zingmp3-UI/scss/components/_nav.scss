@@ -1,0 +1,85 @@
+.nav {
+    transition: transform 0.3s;
+    &__item {
+        padding: 10px 10px;
+        position: relative;
+        font-weight: 600;
+        color: $primary-text-color;
+        font-size: 14px;
+        border-bottom: 2px solid transparent;
+        &:nth-child(1) {
+            padding-left: 0;
+        }
+        &:nth-last-child(2) {
+            padding-right: 0;
+        }
+        &:hover {
+            color: $active-color;
+            border-bottom-color: $active-color;
+            & .dropdown-table-menu {
+                visibility: visible;
+            }
+        }
+
+        &.vip-icon {
+            margin-left: 15px;
+            border-bottom-color: transparent !important;
+            width: 50px;
+            background: url("./../img/vip.svg") center no-repeat;
+        }
+
+        & .nav-link {
+            color: inherit;
+        }
+        & .dropdown-table-menu {
+            visibility: hidden;
+            display: flex;
+            position: absolute;
+            top: 43px;
+            left: 0;
+            background: $bg-color;
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+            & ul {
+                width: 150px;
+                & > * {
+                    cursor: pointer;
+                    padding: 10px 15px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                & div {
+                    color: #2a2b3f;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                & li {
+                    color: $primary-text-color;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    &:hover {
+                        background-color: #efefef;
+                        color: $active-color;
+                    }
+                }
+            }
+        }
+
+        & .collapsible {
+            transition: transform 0.2s, width 0.1s;
+        }
+    }
+}
+
+// animation
+.header--fixed {
+    & .nav {
+        transform: translate(120px, -55px);
+        & .collapsible {
+            transform: scale(0);
+            width: 0;
+            padding: 0;
+        }
+    }
+}

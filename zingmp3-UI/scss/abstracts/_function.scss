@@ -1,0 +1,11 @@
+
+@function make-range-values($start, $end, $suffix, $skip: 0) {
+    $keys: ();
+    $values: ();
+    @for $i from $start through $end {
+        $keys: append($list: $keys, $val: $i);
+        $values: append($list: $values, $val: $i + $suffix);
+    }
+
+    @return zip($keys, $values)
+}

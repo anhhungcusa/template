@@ -1,0 +1,75 @@
+
+header {
+    background-color: $bg-color;
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s;
+    z-index: $sticky;
+    border: none;
+    & .top-bar {
+        &__bottom {
+            // height: 45px;
+            // transition: height 0.3s;
+        }
+        &__top {
+            padding: 15px 0;
+        }
+    }
+    & .logo {
+        background-image: url('./../img/logo-mp3.svg');
+        background-size: cover;
+        width: 100px;
+        height: 32px;
+        display: block;
+    }
+    & .search-wrap {
+        background-color: white;
+        width: 540px;
+        height: 40px;
+        border: 1px solid rgba(219,219,219,.5);
+        transition: transform 0.3s;
+        &__action {
+            margin: 0 10px;
+        }
+        &__content {
+            width: 95%;
+            padding: 5px 0;
+        }
+    }
+
+    & .user-profile {
+        & > * {
+            margin: 0 5px;
+        }
+        &__avatar {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        &__title {
+            transition: transform 0.3s, width 0.1s;
+            & span:hover {
+                color: $active-color;
+            }
+        }
+    }
+}
+
+// animation
+.header--fixed {
+    background-color: #f7f7f7;
+    box-shadow: 0px 1px 18px 5px #83838382;
+    & .user-profile__title {
+        transform: translateX(80px) scale(0);
+        opacity: 0;
+        width: 0;
+    }
+    & .top-bar__bottom {
+        position: absolute;
+    }
+
+    & .search-wrap {
+        width: 215px;
+        transform: translateX(220px);
+    }
+}

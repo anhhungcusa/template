@@ -1,0 +1,127 @@
+$utilities: () !default;
+$utilities: map-merge(
+  (
+    display: (
+      class: d,
+      value: block inline flex none,
+      print: true,
+      property: display
+    ),
+    justify-content: (
+        print: true,
+        property: justify-content,
+        value: (
+            center: center,
+            start: flex-start,
+            end: flex-end,
+            between: space-between,
+            around: space-around,
+        )
+    ),
+    align-items: (
+        print: true,
+        property: align-items,
+        value: (
+            center: center,
+            start: flex-start,
+            end: flex-end
+        )        
+    ),
+    font-size: (
+        print: true,
+        property: font-size,
+        class: f-s,
+        value: $font-size-range
+    ),
+    font-weight: (
+        print: true,
+        property: font-weight,
+        class: f-w,
+        value: (
+            5: 500,
+            6: 600,
+            7: 700,
+            bold: bold
+        )
+    ),
+    z-index: (
+        print: true,
+        property: z-index,
+        class: zindex,
+        value: (
+            sticky: 1000,
+            fixed: 1020,
+            modal: 1030,
+            hidden: -10,
+        )
+    ),
+    image: (
+        print: true,
+        property: width height,
+        class: image,
+        value: (
+            fluid: 100%,
+            auto: auto
+        )
+    ),
+    radius: (
+        print: true,
+        property: border-radius,
+        class: radius,
+        value: (
+            circle: 50%,
+            2: 2px,
+            4: 4px,
+            5: 5px,
+        )
+    ), 
+    cursor: (
+        print: true,
+        property: cursor,
+        value: pointer
+    ),
+    thumb: (
+        print: true,
+        property: width height,
+        class: thumb,
+        value: (
+            40: 40px,
+            60: 60px,
+            50: 50px,
+            120: 120px,
+            190: auto,
+            fluid: 100%,
+        )
+    ),
+    overflow: (
+        print: true,
+        property: overflow,
+        class: overflow,
+        value: hidden
+    ),
+    color: (
+        print: true,
+        property: color,
+        class: color,
+        value: (
+            active: $active-color,
+            blue: #4a90e2,
+            green: #50e3c2,
+            red: #e4340d,
+            white: white
+        )
+    ),
+    position: (
+        print: true,
+        property: position,
+        class: p,
+        value: relative absolute fixed sticky
+    )
+  ),
+  $utilities
+);
+
+.test {
+    align-items: center ;
+    justify-content: space-between;
+}

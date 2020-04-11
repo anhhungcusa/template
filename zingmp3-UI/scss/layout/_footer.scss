@@ -1,0 +1,22 @@
+footer {
+    & > div {
+        margin-top: 40px;
+        border-top: 1px solid #efefef;
+        padding: 50px 0;
+    }
+
+    & .license-info {
+        color: #888;
+        margin-left: 10px;
+    }
+
+    & .nav-footer {
+        color: #888;
+        line-height: 1.8;
+        & li {
+            margin-left: 2px;
+        }
+    }
+
+   
+}

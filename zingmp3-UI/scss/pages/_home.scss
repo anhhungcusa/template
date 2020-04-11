@@ -1,0 +1,516 @@
+.home-pg {
+  & .home-section {
+    & .slider-main {
+      position: relative;
+
+      & .slide-thumb {
+        position: absolute;
+        right: 30px;
+        bottom: -60px;
+        &__link {
+          margin-left: 5px;
+          border: 2px solid transparent;
+          z-index: 1;
+          position: relative;
+          &:hover {
+            border: 2px solid white;
+          }
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              transition: all #{$i * 100 - 50}ms;
+            }
+          }
+
+          &--active {
+            border: 2px solid white;
+          }
+        }
+      }
+
+      &:hover {
+        & .slide-thumb__link {
+          transform: translateY(-70px);
+        }
+      }
+    }
+
+    & section {
+      padding-top: 30px;
+    }
+    & section:first-child {
+      padding-top: 0;
+    }
+    & section:nth-child(2) {
+      background: $bg-color;
+    }
+
+    & .recently-listen {
+      position: relative;
+      z-index: 2;
+      &__header {
+        margin-bottom: 10px;
+
+        & .slide-controller {
+          & i {
+            margin: 0 10px;
+            cursor: pointer;
+            &:hover {
+              color: $active-color;
+            }
+          }
+          &--disable {
+            opacity: 0.1;
+            &:hover {
+              cursor: default;
+            }
+          }
+        }
+      }
+
+      &__slide {
+        & .card {
+          &__image {
+            position: relative;
+            overflow: hidden;
+            & img {
+              transition: transform 500ms;
+            }
+            & .overlay {
+              opacity: 0;
+              cursor: pointer;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, 0.7);
+              & .play-action {
+                color: white;
+                font-size: 50px;
+              }
+            }
+            &:hover {
+              & img {
+                transform: scale(1.05);
+              }
+            }
+          }
+          &:hover .overlay {
+            opacity: 1;
+          }
+          &__info a {
+            @include clamp(2);
+            margin-bottom: 2px;
+            margin-top: 4px;
+            text-transform: capitalize;
+            &:hover {
+              color: $active-color;
+            }
+          }
+        }
+      }
+    }
+
+    & .chart {
+      &__realtime {
+        margin-bottom: 30px;
+        background-image: url("../img/bg-chart.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        & .chart-wrapper {
+          padding-bottom: 5px;
+          background-image: url("../img/bg-chart-container.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          & .chart-header {
+            padding: 20px;
+            & .btn-zingchart {
+              color: white;
+              cursor: pointer;
+              font-weight: 700;
+              background: linear-gradient(to right, #4b38d7, #8d4fe2);
+              border-radius: 10px;
+              width: 86px;
+              height: 24px;
+              font-size: 12px;
+              padding: 0px 5px;
+              flex-grow: 1;
+              &:hover {
+                background: white;
+                color: #65509e;
+              }
+            }
+            & .time {
+              color: white;
+              font-size: 14px;
+              flex-grow: 8;
+              margin-left: 10px;
+            }
+            & .btn-play-all {
+              cursor: pointer;
+              flex-grow: 1;
+              background-color: #65509e;
+              padding: 8px 7px;
+              color: white;
+              font-size: 12px;
+              border-radius: 4px;
+              & i {
+                margin-right: 5px;
+              }
+              &:hover {
+                background: white;
+                color: #65509e;
+              }
+            }
+          }
+        }
+
+        & .realtime-list-song {
+          flex-grow: 1;
+          padding: 15px 5px;
+          & li {
+            padding: 8px 10px 7px;
+            & .card {
+              & > div:nth-child(1) {
+                flex-grow: 1;
+              }
+              & > div:nth-child(2) {
+                flex-grow: 1;
+              }
+              & > div:nth-child(3) {
+                flex-grow: 7;
+              }
+              & > div:nth-child(4) {
+                flex-grow: 1;
+              }
+
+              & .song-info {
+                & .title {
+                  color: white;
+                }
+                & .artist {
+                  color: #a0a0a0;
+                }
+              }
+
+              & .song-img {
+                position: relative;
+                & .overlay {
+                  opacity: 0;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background-color: rgba(0, 0, 0, 0.7);
+                  & .play-action {
+                    color: white;
+                  }
+                }
+              }
+            }
+            &:hover {
+              border-radius: 4px;
+              background-color: rgba(255, 255, 255, 0.15);
+              border-color: transparent;
+              & .overlay {
+                opacity: 1 !important;
+              }
+            }
+
+            &.active {
+              border-radius: 4px;
+              background-color: rgba(255, 255, 255, 0.15);
+              border-color: transparent;
+              & .overlay {
+                opacity: 1 !important;
+              }
+            }
+
+          }
+        }
+      }
+      & .week-chart {
+        &__item {
+          & img {
+            height: 60px;
+            transition: transform 500ms;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+
+    & .artist {
+      & .card {
+        padding: 15px;
+        margin: 1px;
+        box-shadow: #a6a6a6b8 0px 0px 2px;
+        background: url("https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/spotlight-bg.jpg") center no-repeat;
+        background-size: cover;
+        height: 150px;
+        // width: 350px;
+        cursor: pointer;
+        & .artist-img img {
+          box-shadow: #a6a6a6b8 0px 0px 2px;
+          transition: transform 500ms;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+        &__info {
+          & .star-badge {
+            display: inline-block;
+            line-height: 1;
+            padding: 4px 8px;
+            background: linear-gradient(to right, #f508b7, #9102ff);
+            & > * {
+              color: white;
+            }
+            & span {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    & .new-release {
+      & .card-wrapper {
+        padding: 0 10px;
+      }
+      & .card {
+        background: white;
+        box-shadow: 0 0 20px 0 rgba(190, 190, 206, 0.15);
+        padding: 15px;
+        height: 150px;
+        & .artist-img {
+          position: relative;
+          & img {
+            transition: transform 500ms;
+          }
+          & .overlay {
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            & .play-action {
+              color: white;
+              font-size: 40px;
+            }
+          }
+          &:hover {
+            & img {
+              transform: scale(1.05);
+            }
+          }
+          &:hover .overlay {
+            opacity: 1;
+          }
+        }
+
+        & .card__info {
+          flex-direction: column;
+          flex-grow: 1;
+          margin-left: 10px;
+          & .title {
+            color: $primary-text-color;
+            text-transform: capitalize;
+            @include clamp(2);
+          }
+          & .order {
+            font-size: 50px;
+            line-height: 1;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(102, 69, 193, 0.4);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          }
+          & .release-date {
+            color: $secondary-text-color;
+          }
+
+          & .artist {
+            color: $secondary-text-color;
+          }
+        }
+      }
+    }
+
+    & .new-songs {
+      & .song-img {
+        position: relative;
+        & img {
+          transition: transform 500ms;
+        }
+        & .overlay {
+          opacity: 0;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          & .play-action {
+            color: white;
+          }
+        }
+        &:hover {
+          & img {
+            transform: scale(1.2);
+          }
+        }
+        &:hover .overlay {
+          opacity: 1;
+        }
+      }
+
+      & .list-songs {
+        flex-direction: column;
+        &__item {
+          padding: 5px 10px;
+          &:hover {
+            background-color: #f7f7f7;
+          }
+          & .song-info {
+            margin-left: 15px;
+            position: relative;
+            & .artist {
+              color: $secondary-text-color;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              &:hover {
+                color: $active-color;
+              }
+            }
+          }
+          &:hover .extension {
+            visibility: visible;
+          }
+          & .extension {
+            visibility: hidden;
+            & > * {
+              padding: 10px;
+              cursor: pointer;
+              &:hover {
+                color: $active-color;
+              }
+            }
+
+            & i:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    & .topics {
+      & .card {
+        cursor: pointer;
+        &__image {
+          width: 190px;
+          height: 107px;
+          position: relative;
+          & .title-topic {
+            position: absolute;
+            padding-top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            color: white;
+            text-align: center;
+            background: rgb(231, 231, 231);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(36, 36, 36, 0.72) 76%);
+            transition: padding-top 0.5s;
+          }
+          &:hover .title-topic {
+            padding-top: 40px;
+          }
+        }
+      }
+    }
+
+    & .video-hot {
+      & .artist {
+        color: $secondary-text-color;
+      }
+      & .home-video {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &__info {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+          padding: 20px;
+          left: 0;
+          & .title {
+            color: white;
+          }
+        }
+        & .overlay {
+          visibility: hidden;
+          position: absolute;
+          background: #4d4d4d40;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          & .play-action {
+            font-size: 60px;
+            color: white;
+          }
+        }
+        & img {
+          transition: transform 0.5s;
+        }
+        &:hover {
+          & .overlay {
+            visibility: visible;
+          }
+          .home-video__info {
+            visibility: hidden;
+          }
+          & img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+  & .beta-container {
+    position: fixed;
+    right: 40px;
+    bottom: 90px;
+    & .beta-list {
+      color: #a0a0a0;
+      font-size: 1.5rem;
+      & > * {
+        cursor: pointer;
+        background: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 0 gray;
+        box-shadow: 0 2px 2px 1px #cccccc;
+        &:hover {
+          color: $active-color;
+          box-shadow: 0 3px 4px 1px #d0d0d0;
+        }
+      }
+    }
+  }
+}

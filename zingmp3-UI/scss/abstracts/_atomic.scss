@@ -1,0 +1,9 @@
+/*---------Start atomic-----------*/
+// generate utilities
+@each $key, $utility in $utilities {
+    @if type-of($value: $utility)  == "map" and map-get($map: $utility, $key: print) == true {
+        @include generate-utility($utility);
+    }
+}
+
+/*---------End atomic-----------*/
