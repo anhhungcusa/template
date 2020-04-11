@@ -259,7 +259,8 @@ header {
       color: #6e55b4; }
 
 .header--fixed {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  box-shadow: 0px 1px 18px 5px #83838382; }
   .header--fixed .user-profile__title {
     transform: translateX(80px) scale(0);
     opacity: 0;
